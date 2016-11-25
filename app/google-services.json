@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "165257431435",
+    "firebase_url": "https://jtock-8ab18.firebaseio.com",
+    "project_id": "jtock-8ab18",
+    "storage_bucket": "jtock-8ab18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165257431435:android:14f0503a0420ddf5",
+        "android_client_info": {
+          "package_name": "com.jtrok.iceteck.jtrock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165257431435-6a8481j4cs59v57lpe71utl55vbpiqg1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jtrok.iceteck.jtrock",
+            "certificate_hash": "CFB43297CA57F90DB2C44375B1925AD5F06E3D03"
+          }
+        },
+        {
+          "client_id": "165257431435-0h6im2nser86aorqmc96e1c7rn1gjcno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfahj_Gk-2hEM-KXW54Kme7QMRy3NRvPk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165257431435-0h6im2nser86aorqmc96e1c7rn1gjcno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
