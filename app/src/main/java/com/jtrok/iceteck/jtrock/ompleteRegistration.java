@@ -17,6 +17,7 @@ public class ompleteRegistration extends AppCompatActivity {
     private EditText password, confirmPassword;
     private TextView passwordHint;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +38,14 @@ public class ompleteRegistration extends AppCompatActivity {
         password.addTextChangedListener(passwordWatcher);
         confirmPassword.addTextChangedListener(passwordWatcher);
     }
-    public void signup(View view) {
-        Intent intent = new Intent(this,DashBoard.class);
+
+    //to uncomment as soon as possible
+
+
+   /* public void signup(View view) {
+        Intent intent = new Intent(this,.class);// to be modified today in o to include the next activity
         startActivity(intent);
-    }
+    } */
 
     /*textWatcher - needs its 3 methods to be implemented in order to work*/
     private final TextWatcher passwordWatcher = new TextWatcher() {

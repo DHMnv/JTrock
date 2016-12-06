@@ -9,12 +9,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jtrok.iceteck.jtrock.sign_in">
-    <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+   <!-- <android.support.v4.widget.CircleImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/jTrockLogo"
-        app:shape_mode="circle"
-        android:src="@drawable/ic_action_picture"
-        app:stroke_color="#009688"
-        app:stroke_width="3dp" />
+        android:src="@drawable/ic_action_picture" /> -->
+
 </RelativeLayout>

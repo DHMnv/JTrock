@@ -91,6 +91,9 @@ public class welcome extends AppCompatActivity {
                 } else {
                     launchHomeScreen();
                 }
+                // launching the intent to lauch the login page
+               // Intent intent = new Intent(welcome.this, sign_in.class);
+               // startActivity(intent);
             }
         });
     }
@@ -120,10 +123,10 @@ public class welcome extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(welcome.this, MainActivity.class)); //to be changed
+        startActivity(new Intent(welcome.this, sign_in.class)); //to be changed
         finish();
     }
-    n
+
     //  viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 

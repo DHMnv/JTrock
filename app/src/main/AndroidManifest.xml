@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.jtrok.iceteck.jtrock">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +24,9 @@
         </activity>
         <activity android:name=".welcome" />
         <activity android:name=".sign_in" />
-        <activity android:name=".ompleteRegistration"></activity>
+        <activity android:name=".ompleteRegistration" />
+        <activity android:name=".dashbord" />
+        <activity android:name=".view.FullScreenImage"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,83 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jtrok.iceteck.jtrock.profile">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- display the user picture using the circle mode -->
+        <android.support.v4.widget.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userPic"
+            android:src="@drawable/ic_action_picture"/>
+       <!-- <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userPic"
+            app:shape_mode="circle"
+            android:src="@drawable/ic_action_picture"
+            app:stroke_color="#009688"
+            app:stroke_width="3dp" /> -->
+        <!-- to display the user name or email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userEmail"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/dealsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_good"
+            android:text="My Deals"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/favoritesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_favorite"
+            android:text="favorites"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/contactusBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_good"
+            android:text="contact us"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/aboutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_about"
+            android:text="about"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/helpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_help"
+            android:text="help"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/shareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_share"
+            android:text="share"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_action_good"
+            android:text="logOut"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</FrameLayout>

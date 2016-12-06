@@ -27,6 +27,8 @@
     <color name="bg_screen2">#008080</color>
     <color name="bg_screen3">#3395ff</color>
     <color name="bg_screen4">#c873f4</color>
+    <!-- for the chat -->
+    <color name="background">#e9e3dd</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#d1395c</color>
