@@ -18,10 +18,11 @@ import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.SizeReadyCallback;
 import com.bumptech.glide.request.target.Target;
+import com.jtrok.iceteck.jtrock.R;
 import com.jtrok.iceteck.jtrock.adapter.CircleTransform;
 
-import //alessandro.firebaseandroid.R;
-import //alessandro.firebaseandroid.adapter.CircleTransform;
+//import alessandro.firebaseandroid.R;
+//import alessandro.firebaseandroid.adapter.CircleTransform;
 
 public class FullScreenImage extends AppCompatActivity {
     private TouchImageView mImageView;
@@ -76,7 +77,7 @@ public class FullScreenImage extends AppCompatActivity {
         nameUser = getIntent().getStringExtra("nameUser");
         urlPhotoUser = getIntent().getStringExtra("urlPhotoUser");
         urlPhotoClick = getIntent().getStringExtra("urlPhotoClick");
-        Log.i("TAG","imagem recebida "+urlPhotoClick);
+        Log.i("TAG","image receive "+urlPhotoClick);
         tvUser.setText(nameUser); // Name
         Glide.with(this).load(urlPhotoUser).centerCrop().transform(new CircleTransform(this)).override(40,40).into(ivUser);
 

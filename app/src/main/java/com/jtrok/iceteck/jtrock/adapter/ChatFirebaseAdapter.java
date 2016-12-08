@@ -22,11 +22,12 @@ import com.bumptech.glide.util.Util;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
+import com.jtrok.iceteck.jtrock.R;
 import com.jtrok.iceteck.jtrock.model.ChatModel;
 
 //import alessandro.firebaseandroid.R;
 //import alessandro.firebaseandroid.model.ChatModel;
-import hani.momanii.supernova_emoji_library.Helper.EmojiconTextView;
+//import hani.momanii.supernova_emoji_library.Helper.EmojiconTextView;
 
 
 public class ChatFirebaseAdapter extends FirebaseRecyclerAdapter<ChatModel,ChatFirebaseAdapter.MyChatViewHolder> {

@@ -44,7 +44,7 @@ public class chat extends Fragment {
     FirebaseStorage storage = FirebaseStorage.getInstance();
 
     //CLass Model
-    private alessandro.firebaseandroid.model.UserModel userModel;
+    private com.jtrok.iceteck.jtrock.model.UserModel userModel;
 
     //Views UI
     private RecyclerView rvListMessage;

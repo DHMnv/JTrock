@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
 import com.squareup.picasso.Picasso;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,7 +37,7 @@ public class profile extends Fragment {
     // getting the views to display user informations
     private ImageView userPic;
     private TextView userName;
-    private Button myDeals;
+   public Button myDeals;
     private Button myFavorites;
     private Button contact;
     private Button about;
@@ -81,57 +83,7 @@ public class profile extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            myDeals = (Button) findViewById(R.id.dealsBtn);
-            myFavorites = (Button) findViewById(R.id.favoritesBtn);
-            contact = (Button) findViewById(R.id.contactsBtn);
-            about = (Button) findViewById(R.id.aboutBtn);
-            help = (Button) findViewById(R.id.helpBtn);
-            share = (Button) findViewById(R.id.share);
-            logOut = (Button) findViewById(R.id.logout);
-            userPic = (ImageView) findViewById(R.id.userPic);
-        /* to retrieve user information and display it */
 
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            if (user != null) {
-                for (UserInfo profile : user.getProviderData()) {
-                    // Id of the provider (ex: google.com)
-                    String providerId = profile.getProviderId();
-
-                    // UID specific to the provider
-                    String uid = profile.getUid();
-
-                    // Name, email address, and profile photo Url
-                    String name = profile.getDisplayName();
-                    String email = profile.getEmail();
-                    Uri photoUrl = profile.getPhotoUrl();
-
-                    //implementing the find view by id in order to get every field
-                    userName.setText(name);
-                    // should use picasso in order to display it
-                    Picasso.with(this).load(photoUrl).into(userPic);
-
-
-                }
-                // logout the user ih he want to logout
-                logOut.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (v.getId() == R.id.sign_out) {
-                            AuthUI.getInstance()
-                                    .signOut(this)
-                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            // user is now signed out
-                                            startActivity(new Intent(this, sign_in.class));
-                                            finish();
-                                        }
-                                    });
-                        }
-                    }
-                });
-
-
-            }
         }
     }
 
@@ -139,6 +91,58 @@ public class profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+        myDeals = (Button) getView().findViewById(R.id.dealsBtn);
+        myFavorites = (Button) getView().findViewById(R.id.favoritesBtn);
+        contact = (Button) getView().findViewById(R.id.contactusBtn);
+        about = (Button) getView().findViewById(R.id.aboutBtn);
+        help = (Button) getView().findViewById(R.id.helpBtn);
+        share = (Button) getView().findViewById(R.id.shareBtn);
+        logOut = (Button) getView().findViewById(R.id.logoutBtn);
+        userPic = (ImageView) getView().findViewById(R.id.userPic);
+        /* to retrieve user information and display it */
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            for (UserInfo profile : user.getProviderData()) {
+                // Id of the provider (ex: google.com)
+                String providerId = profile.getProviderId();
+
+                // UID specific to the provider
+                String uid = profile.getUid();
+
+                // Name, email address, and profile photo Url
+                String name = profile.getDisplayName();
+                String email = profile.getEmail();
+                Uri photoUrl = profile.getPhotoUrl();
+
+                //implementing the find view by id in order to get every field
+                userName.setText(name);
+                // should use picasso in order to display it
+                Picasso.with(profile).load(photoUrl).into(userPic);
+
+
+            }
+            // logout the user ih he want to logout
+            logOut.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (v.getId() == R.id.logoutBtn) {
+                        AuthUI.getInstance()
+                                .signOut(profile.this)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        // user is now signed out
+                                        startActivity(new Intent (getActivity(), sign_in.class));
+                                        //finish();
+                                    }
+                                });
+                    }
+                }
+            });
+
+
+        }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
